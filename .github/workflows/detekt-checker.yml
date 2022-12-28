@@ -1,0 +1,32 @@
+name: Code Che CI
+on: [pull_request]
+
+jobs:
+  build:
+    name: Code Smell CI
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@master
+
+      - name: Run Action Ktlint
+        uses: ScaCap/action-ktlint@master
+        with:
+          android: true
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: github-pr-review
+          fail_on_error: true
+          level: error,info,warning
+
+      - name: Run Action Detekt
+        uses: alaegin/Detekt-Action@v1.21.0-RC2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          detekt_config: app/config/detekt-config.yml
+          fail_on_error: true
+          detekt_parallel: true
+          detekt_all_rules: true
+          reviewdog_reporter: github-pr-review
+          reviewdog_level: error,info,warning
+
