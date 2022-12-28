@@ -1,0 +1,20 @@
+name: Check Code CI
+on: [pull_request]
+
+jobs:
+  build:
+    name: Ktlint
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@master
+
+      - name: Run Action Ktlint
+        uses: ScaCap/action-ktlint@master
+        with:
+          android: true
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: github-pr-review
+          fail_on_error: true
+          level: error,info,warning
