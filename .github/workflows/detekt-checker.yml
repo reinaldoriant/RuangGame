@@ -7,14 +7,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@master
+      - name: Clone repo
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+          ref: ${{ github.head_ref }}
 
       - name: Run Action Detekt
         uses: alaegin/Detekt-Action@v1.21.0-RC2
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          detekt_config: config/detekt-config.yml
+          detekt_config: app/config/detekt-config.yml
           fail_on_error: true
           detekt_parallel: true
           detekt_all_rules: true
