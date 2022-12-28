@@ -1,9 +1,8 @@
-name: Check Code CI
+name: Check Code with Ktlint CI
 on: [pull_request]
 
 jobs:
   build:
-    name: Ktlint
     runs-on: ubuntu-latest
 
     steps:

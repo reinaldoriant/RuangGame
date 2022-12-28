@@ -1,9 +1,8 @@
-name: Check Code CI
+name: Check Code with Detekt CI
 on: [pull_request]
 
 jobs:
   build:
-    name: Detekt
     runs-on: ubuntu-latest
 
     steps:
