@@ -69,19 +69,4 @@ dependencies {
     api(Libraries.lifecycleViewModelKtx)
     api(Libraries.lifecycleLiveDataKtx)
     api(Libraries.lifecycleRuntimeKtx)
-
-    // Network
-    api(Libraries.retrofit2)
-    api(Libraries.retrofitConverterGson)
-    api(Libraries.gson)
-
-    // Storage
-    api(Libraries.jetpackDatastore)
-    api(Libraries.roomCompiler)
-    api(Libraries.roomKtx)
-    api(Libraries.roomRuntime)
-
-    // Hilt
-    api(Libraries.hiltAndroid)
-    api(Libraries.hiltCompiler)
 }
