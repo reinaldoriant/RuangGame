@@ -1,13 +1,15 @@
-name: Code Quality CI
+name: Check Code with Ktlint CI
 on: [pull_request]
+
 jobs:
-  ktlint:
-    name: Code Quality CI
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Clone repo
         uses: actions/checkout@master
+        with:
+          fetch-depth: 1
 
       - name: Run Action Ktlint
         uses: ScaCap/action-ktlint@master
@@ -17,4 +19,3 @@ jobs:
           reporter: github-pr-review
           fail_on_error: true
           level: error,info,warning
-

@@ -1,0 +1,25 @@
+name: Check Code with Detekt CI
+on: [pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clone repo
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+          ref: ${{ github.head_ref }}
+
+      - name: Run Action Detekt
+        uses: alaegin/Detekt-Action@v1.22.0-RC3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          detekt_config: app/config/detekt-config.yml
+          fail_on_error: true
+          detekt_parallel: true
+          detekt_all_rules: true
+          reviewdog_reporter: github-pr-review
+          reviewdog_level: error,info,warning
+
