@@ -1,0 +1,1 @@
+/Users/tidigital/Documents/Android Apps/RuangGame/buildSrc/build/classes/kotlin/main/AndroidProjectConfig.class:/Users/tidigital/Documents/Android Apps/RuangGame/buildSrc/build/classes/kotlin/main/Libraries$Versions.class:/Users/tidigital/Documents/Android Apps/RuangGame/buildSrc/build/classes/kotlin/main/Libraries.class
