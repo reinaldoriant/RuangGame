@@ -59,7 +59,8 @@ object Libraries {
     const val jetpackDatastore =
         "androidx.datastore:datastore-preferences:${Versions.jetpackDatastore}"
     const val coil = "io.coil-kt:coil:${Versions.coil}"
-    const val swipeRefreshLayout = "androidx.swiperefreshlayout:swiperefreshlayout:${Versions.swipeRefreshLayout}"
+    const val swipeRefreshLayout =
+        "androidx.swiperefreshlayout:swiperefreshlayout:${Versions.swipeRefreshLayout}"
     const val roomRuntime = "androidx.room:room-runtime:${Versions.room}"
     const val roomCompiler = "androidx.room:room-compiler:${Versions.room}"
     const val roomKtx = "androidx.room:room-ktx:${Versions.room}"

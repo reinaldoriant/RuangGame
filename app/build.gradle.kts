@@ -1,7 +1,7 @@
 plugins {
-    id ("com.android.application")
-    id ("org.jetbrains.kotlin.android")
-    id ("com.google.dagger.hilt.android") version "2.44" apply false
+    id("com.android.application")
+    id("org.jetbrains.kotlin.android")
+    id("com.google.dagger.hilt.android") version "2.44" apply false
 }
 
 android {
@@ -84,5 +84,4 @@ dependencies {
     // Hilt
     api(Libraries.hiltAndroid)
     api(Libraries.hiltCompiler)
-
 }
