@@ -7,4 +7,14 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="gallery">#EEEEEE</color>
+    <color name="mine_shaft">#333333</color>
+    <color name="dusty_gray">#999999</color>
+    <color name="black_50">#80000000</color>
+    <color name="bahama_blue_v5">#00559A</color>
+    <color name="silver_0_v1">#00CCCCCC</color>
+    <color name="silver_6_v1">#10CCCCCC</color>
+    <color name="silver_13_v1">#20CCCCCC</color>
+    <color name="silver_19_v1">#30CCCCCC</color>
+    <color name="silver_31_v1">#50CCCCCC</color>
 </resources>
