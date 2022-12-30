@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">RuangGame</string>
+    <string name="dummy_title">Fifa World Cup 2</string>
+    <string name="dummy_date">30 Desember 2022</string>
 </resources>
