@@ -7,4 +7,5 @@ package com.ruangaldo.ruanggame.util.view
 
 object Constant {
     const val TITLE = "Ruang Game"
+    const val NO_INTERNET = "Internetnya mati nih"
 }

@@ -31,7 +31,7 @@ class GameListDomainTest {
 
     @Test
     fun `Should get weather from repository`(): Unit = runBlocking {
-        val input = useCase.invoke()
+        val input = useCase.invoke(swipe = true, network = true)
         flow {
             emit(ViewResource.Loading())
             input.collect{ response ->

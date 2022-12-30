@@ -30,7 +30,7 @@ class RawgRepositoryTest {
 
     @Test
     fun `get game list data`(): Unit = runBlocking {
-        val gameList = repository.fetchGameList()
+        val gameList = repository.fetchGameList(swipe = true, network = true)
         flow {
             Assert.assertNotNull(
                 emit(gameList)

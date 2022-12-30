@@ -36,9 +36,9 @@ class GameListViewModelTest : BaseUnitTest(){
 
     @Test
     fun `success get game list`() = runTest {
-        viewModel.fetchGame()
+        viewModel.fetchGame(true, network = true)
         flow {
-            emit(viewModel.fetchGame())
+            emit(viewModel.fetchGame(swipe = true, network = true))
             assertNotNull(viewModel.gameListResult.value)
             assertEquals(article, viewModel.gameListResult.value?.payload)
         }

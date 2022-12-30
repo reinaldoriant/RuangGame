@@ -38,7 +38,13 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), SwipeRefreshLayout.OnR
     }
 
     private fun fetchGame() {
-        _viewModel.fetchGame(binding.swipeRefresh.isRefreshing, isNetworkAvailable(this))
+        val network = isNetworkAvailable()
+        if (network) {
+            _viewModel.fetchGame(binding.swipeRefresh.isRefreshing, network)
+        } else {
+            Toast.makeText(this, Constant.NO_INTERNET, Toast.LENGTH_LONG).show()
+        }
+
     }
 
     override fun initialize() {
