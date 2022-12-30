@@ -4,7 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.ruangaldo.ruanggame.domain.model.GameUiListModel
-import com.ruangaldo.ruanggame.domain.usecase.FetchGameListUseCase
+import com.ruangaldo.ruanggame.domain.usecase.GameListUseCase
 import com.ruangaldo.ruanggame.util.wrapper.ViewResource
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
@@ -16,14 +16,14 @@ import kotlinx.coroutines.launch
  */
 
 @HiltViewModel
-class GameListViewModel @Inject constructor(private val useCase: FetchGameListUseCase) :
+class GameListViewModel @Inject constructor(private val useCase: GameListUseCase) :
     ViewModel() {
 
     val gameListResult = MutableLiveData<ViewResource<GameUiListModel?>>()
 
-    fun fetchGame() {
+    fun fetchGame(swipe: Boolean, network: Boolean) {
         viewModelScope.launch {
-            useCase().collect{
+            useCase.fetch(swipe, network).collect{
                 gameListResult.postValue(it)
             }
         }

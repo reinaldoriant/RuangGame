@@ -10,5 +10,8 @@ import kotlinx.coroutines.flow.Flow
  */
 
 interface IGamesRepository {
-    suspend fun fetchGameList(): Flow<DataResource<List<GameItemEntities>>>
+    suspend fun fetchGameList(
+        swipe: Boolean,
+        network: Boolean
+    ): Flow<DataResource<List<GameItemEntities>>>
 }

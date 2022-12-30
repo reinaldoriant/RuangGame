@@ -28,8 +28,11 @@ object Libraries {
         const val junit = "4.13.2"
         const val mockito = "4.8.1"
         const val mockitoKotlin = "2.2.0"
+        const val mockitoInline = "2.13.0"
         const val mockWebServer = "4.10.0"
         const val androidTestJunit = "1.1.3"
+        const val coreTesting = "2.1.0"
+        const val coroutineTest = "1.3.8"
         const val espresso = "3.4.0"
         const val jetpackDatastore = "1.0.0"
         const val coil = "2.1.0"
@@ -68,8 +71,11 @@ object Libraries {
     const val mockito = "org.mockito:mockito-core:${Versions.mockito}"
     const val mockitoKotlin = "com.nhaarman.mockitokotlin2:mockito-kotlin:${Versions.mockitoKotlin}"
     const val mockWebServer = "com.squareup.okhttp3:mockwebserver:${Versions.mockitoKotlin}"
+    const val mockitoInline = "org.mockito:mockito-inline:${Versions.mockitoInline}"
     const val androidJunit = "androidx.test.ext:junit:${Versions.androidTestJunit}"
     const val espressoCore = "androidx.test.espresso:espresso-core:${Versions.espresso}"
+    const val coreTesting = "androidx.arch.core:core-testing:${Versions.coreTesting}"
+    const val coroutineTest = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.coroutineTest}"
 
     const val coil = "io.coil-kt:coil:${Versions.coil}"
     const val swipeRefreshLayout =

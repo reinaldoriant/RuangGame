@@ -65,12 +65,15 @@ dependencies {
     api(Libraries.activityX)
 
     // Unit test
-    testApi(Libraries.junit)
-    testApi(Libraries.mockito)
-    testApi(Libraries.mockitoKotlin)
-    androidTestApi(Libraries.androidJunit)
-    androidTestApi(Libraries.espressoCore)
-    androidTestApi(Libraries.mockWebServer)
+    testImplementation(Libraries.junit)
+    testImplementation(Libraries.mockito)
+    testImplementation(Libraries.mockitoKotlin)
+    androidTestImplementation(Libraries.androidJunit)
+    androidTestImplementation(Libraries.espressoCore)
+    androidTestImplementation(Libraries.mockWebServer)
+    androidTestImplementation(Libraries.mockitoInline)
+    testImplementation(Libraries.coroutineTest)
+    testImplementation(Libraries.coreTesting)
 
     // Image process
     api(Libraries.coil)

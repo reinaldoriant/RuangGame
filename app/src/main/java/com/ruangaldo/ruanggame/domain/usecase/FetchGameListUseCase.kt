@@ -17,9 +17,9 @@ import kotlinx.coroutines.flow.flow
 class FetchGameListUseCase @Inject constructor(
     private val repository: IGamesRepository
 ) {
-    operator fun invoke(): Flow<ViewResource<GameUiListModel?>> = flow {
-        repository.fetchGameList().collect { response ->
-            emit(ViewResource.Loading())
+    operator fun invoke(swipe: Boolean, network: Boolean): Flow<ViewResource<GameUiListModel?>> = flow {
+        emit(ViewResource.Loading())
+        repository.fetchGameList(swipe, network).collect { response ->
             response.suspendSubscribe(
                 doOnSuccess = {
                     emit(ViewResource.Success(GameUiMapper.toGameUiItem(it)))
